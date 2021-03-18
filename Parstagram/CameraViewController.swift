@@ -20,6 +20,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func cancelPost(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func onSubmit(_ sender: Any) {
         let post = PFObject(className: "Posts")

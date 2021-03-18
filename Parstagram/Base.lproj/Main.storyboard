@@ -105,7 +105,7 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
-        <!--Feed View Controller-->
+        <!--Home-->
         <scene sceneID="dN0-Kj-gpx">
             <objects>
                 <viewController id="8BI-0p-J9R" customClass="FeedViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -177,7 +177,12 @@
                         <viewLayoutGuide key="safeArea" id="KFN-kY-AD6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UXy-y6-ksH">
+                    <navigationItem key="navigationItem" title="Home" id="UXy-y6-ksH">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="AxW-if-Q34">
+                            <connections>
+                                <action selector="onLogout:" destination="8BI-0p-J9R" id="iJJ-rB-37I"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+" image="insta_camera_btn" style="plain" id="D1S-nx-Igr">
                             <color key="tintColor" red="0.050176553428173065" green="0.61783766746520996" blue="0.99000424146652222" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -201,8 +206,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="uf0-uu-IUs">
-                                <rect key="frame" x="10" y="77.5" width="394" height="461"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="uf0-uu-IUs">
+                                <rect key="frame" x="10" y="75" width="394" height="461"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="461" id="BRY-jZ-suI"/>
@@ -220,17 +225,25 @@
                                     <action selector="onSubmit:" destination="xeh-ux-qFp" eventType="touchUpInside" id="NKY-W6-m9q"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GTx-55-bHd">
-                                <rect key="frame" x="10" y="552" width="394" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GTx-55-bHd">
+                                <rect key="frame" x="10" y="544" width="394" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwy-dl-HZb">
+                                <rect key="frame" x="183" y="783" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelPost:" destination="xeh-ux-qFp" eventType="touchUpInside" id="rZX-80-pJe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dhb-4O-fW8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="uf0-uu-IUs" firstAttribute="centerY" secondItem="plh-U8-eNu" secondAttribute="centerY" constant="-140" id="7BN-DH-CxW"/>
                             <constraint firstItem="Dhb-4O-fW8" firstAttribute="trailing" secondItem="2Qr-Jb-cDr" secondAttribute="trailing" constant="10" id="FsN-xt-9Ua"/>
+                            <constraint firstItem="Iwy-dl-HZb" firstAttribute="centerX" secondItem="plh-U8-eNu" secondAttribute="centerX" id="GYy-sX-jgi"/>
                             <constraint firstItem="2Qr-Jb-cDr" firstAttribute="top" secondItem="GTx-55-bHd" secondAttribute="bottom" constant="8" symbolic="YES" id="H8c-7d-nOh"/>
                             <constraint firstItem="uf0-uu-IUs" firstAttribute="leading" secondItem="Dhb-4O-fW8" secondAttribute="leading" constant="10" id="P8l-3u-BEk"/>
                             <constraint firstItem="GTx-55-bHd" firstAttribute="leading" secondItem="Dhb-4O-fW8" secondAttribute="leading" constant="10" id="XUt-Nr-RqA"/>
@@ -238,9 +251,12 @@
                             <constraint firstItem="2Qr-Jb-cDr" firstAttribute="leading" secondItem="Dhb-4O-fW8" secondAttribute="leading" constant="10" id="hTb-2s-P2V"/>
                             <constraint firstItem="Dhb-4O-fW8" firstAttribute="trailing" secondItem="uf0-uu-IUs" secondAttribute="trailing" constant="10" id="iHp-NV-A7e"/>
                             <constraint firstItem="GTx-55-bHd" firstAttribute="top" secondItem="uf0-uu-IUs" secondAttribute="bottom" constant="13.5" id="jkM-lW-NAL"/>
+                            <constraint firstItem="Iwy-dl-HZb" firstAttribute="top" secondItem="2Qr-Jb-cDr" secondAttribute="bottom" constant="143" id="knp-Ec-tdG"/>
                             <constraint firstItem="uf0-uu-IUs" firstAttribute="centerX" secondItem="plh-U8-eNu" secondAttribute="centerX" id="zCE-vu-eT0"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="commentField" destination="GTx-55-bHd" id="fUe-TE-B7D"/>
                         <outlet property="imageView" destination="uf0-uu-IUs" id="PYt-ho-fBZ"/>
