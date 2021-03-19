@@ -23,7 +23,7 @@ The following **bonus** features are implemented:
 ### Video Walkthrough
 
 Here's a walkthrough of implemented user stories:<br>
---------------Stay Logged in/Logout-----------------------View/Post Comments--------------<br>
+--------------Stay Logged in/Logout-----------------------View/Post Comments----------------<br>
 <img src="http://g.recordit.co/suB275eGKv.gif" title='Video Walkthrough' width='350' alt='Video Walkthrough'> <img src="http://g.recordit.co/3uY644FKxO.gif" width=350> 
 
 ## Parstagram - Part I
